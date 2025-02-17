@@ -1,0 +1,7 @@
+### POST to server
+POST http://localhost:8080/upload
+
+### GET Persons
+GET http://localhost:8080/persons
+
+###

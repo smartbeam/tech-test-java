@@ -9,18 +9,21 @@ import java.io.*;
 @Service
 public class CSVService {
 
+    // TODO add repository
 
-    public Boolean readCsv(String filePath) throws IOException {
-        //TODO get file from path and convert
+    public int readCsv(String filePath) throws IOException {
+        //TODO get file from path (use ClassPathResource) and convert
         InputStream is = null;
         try (Reader reader = new BufferedReader(new InputStreamReader(is))) {
             CsvToBean<Person> csvToBean = new CsvToBeanBuilder<Person>(reader)
                     .withType(Person.class)
                     .withIgnoreLeadingWhiteSpace(true)
                     .build();
-            //TODO save to DB
+            //TODO parse csvToBean and save to DB
+
+            //TODO return number of persons
+            return 0;
         }
-        return true;
     }
 }
 
